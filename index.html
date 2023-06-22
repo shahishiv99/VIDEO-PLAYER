@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video Player</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="player">
-      <div class="container">
-        <video
-          src="mixkit-mother-and-daughters-in-a-kitchen-dancing-4565-medium (1).mp4"
-          class="video"
-          playsinline
-        ></video>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container col-12">
+    <div class="video-player">
+      <div class="video-box">
+        <video src="mixkit-mother-and-daughters-in-a-kitchen-dancing-4565-medium (1).mp4" class="video"
+          playsinline></video>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+
+    <div class="progress">
+      <div class="video-progress-back">
+        <div class="video-progress"></div>
+      </div>
+    </div>
+
+    <div class="controls show-controls">
+      <div class="play-controls">
+        <div class="left-controls">
+          <i class="fa fa-play" title="Play"></i>
+          <i class="fa fa-volume-up" title="Sound"></i>
+          <div class="volume">
+            <div class="volume-progress">
+              <div class="volumeProgress">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-controls">
+          <div class="start-time">00.00 /</div>
+          <div class="duration">05.00</div>
+          <select id="speed" class="speed">
+            <option value="0.5x">0.5 X</option>
+            <option value="0.75x">0.75 X</option>
+            <option value="1x" selected>1 X</option>
+            <option value="1.5x">1.5 X</option>
+            <option value="1.75x">1.75 X</option>
+            <option value="2x">2 X</option>
+          </select>
+          <i class="fa fa-expand expand"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
 </html>
